@@ -1207,3 +1207,110 @@ body {
         bottom: 20px;
     }
 }
+
+/* Language Selector */
+.lang-selector {
+    position: relative;
+    margin-right: 8px;
+}
+
+.lang-toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.lang-toggle:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-1px);
+}
+
+.lang-toggle svg {
+    width: 16px;
+    height: 16px;
+}
+
+.lang-dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    min-width: 160px;
+    z-index: 2000;
+    overflow: hidden;
+    animation: fadeInDown 0.2s ease-out;
+}
+
+.lang-dropdown.show {
+    display: block;
+}
+
+.lang-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    color: #2d3748;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    border: none;
+    background: none;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.lang-option:hover {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    color: #667eea;
+}
+
+.lang-option .lang-flag {
+    font-size: 1.2rem;
+}
+
+/* Login page language selector */
+.login-lang-selector {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+}
+
+.login-lang-selector .lang-toggle {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+/* Contact page language selector */
+.contact-lang-selector {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+}
+
+.contact-lang-selector .lang-toggle {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+/* Smooth text transition */
+[data-i18n] {
+    transition: opacity 0.15s ease;
+}

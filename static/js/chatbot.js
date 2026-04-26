@@ -41,7 +41,7 @@ async function sendMessage() {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ message: message })
+            body: JSON.stringify({ message: message, language: (typeof getCurrentLanguage === 'function') ? getCurrentLanguage() : 'en' })
         });
         
         if (!response.ok) {

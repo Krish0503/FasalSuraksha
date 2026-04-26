@@ -41,7 +41,6 @@ uploadimages/*
 !uploadimages/.gitkeep
 
 # ML Models (large files)
-models/*.keras
 models/*.h5
 
 # Dataset folders
